@@ -43,7 +43,7 @@ return [
      * Модель, которая будет выполнять обработку принятого каталога от 1С.
      * Модель должна реализовывать интерфейс \Mavsan\LaProtocol\Interfaces\Import
      */
-    'catalogWorkModel'   => '',
+    'catalogWorkModel'   => \App\Models\Import::class,
 
     /*
      * Модель, которая будет выполнять отправление заказов.
