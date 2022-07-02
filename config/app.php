@@ -177,6 +177,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Mavsan\LaProtocol\Providers\ProtocolProvider::class,
+        App\Providers\RepositoryServiceProvider::class
     ],
 
     /*

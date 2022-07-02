@@ -13,14 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('catalog_categories', function (Blueprint $table) {
+        Schema::create('catalog_properties', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->boolean('active');
-            $table->string('slug');
-            $table->string('external_id')->nullable()->unique();
-            $table->unsignedBigInteger('parent')->nullable();
             $table->timestamps();
+            $table->string('name');
+            $table->string('type');
+            $table->string('slug')->nullable();
+            $table->json('configuration')->nullable();
+            $table->softDeletes();
 
             $table->unique('slug');
         });
@@ -33,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('products');
+        Schema::dropIfExists('properties');
     }
 };

@@ -13,16 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('catalog_categories', function (Blueprint $table) {
+        Schema::create('catalog_price_types', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->boolean('active');
-            $table->string('slug');
-            $table->string('external_id')->nullable()->unique();
-            $table->unsignedBigInteger('parent')->nullable();
             $table->timestamps();
 
-            $table->unique('slug');
+            $table->string('name');
+            $table->boolean('active');
+            $table->string('external_id');
         });
     }
 
@@ -33,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('products');
+        Schema::dropIfExists('catalog_price_types');
     }
 };

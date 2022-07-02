@@ -7,13 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
 
-class CatalogProductCategory extends Model
+class Property extends Model
 {
     use HasSlug;
 
-    /**
-     * Get the options for generating the slug.
-     */
+    protected $table = 'catalog_properties';
+
     public function getSlugOptions() : SlugOptions
     {
         return SlugOptions::create()

@@ -19,14 +19,9 @@ return new class extends Migration
             $table->string('slug');
             $table->string('external_id');
             $table->text('description');
-
-            $table->unsignedBigInteger('preview_image_id');
-            $table->foreign('preview_image_id')->references('id')->on('files');
-
-            $table->unsignedBigInteger('detail_picture_id');
-            $table->foreign('detail_picture_id')->references('id')->on('files');
-
             $table->timestamps();
+
+            $table->unique('slug');
         });
     }
 

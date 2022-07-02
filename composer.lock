@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9b15cbe2533a132bf17badd314213f97",
+    "content-hash": "978e95dc70402b8c11587dc13c98c547",
     "packages": [
         {
             "name": "brick/math",
@@ -2782,6 +2782,71 @@
                 }
             ],
             "time": "2022-03-27T21:42:02+00:00"
+        },
+        {
+            "name": "sertxudeveloper/laravel-media-model",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sertxudeveloper/laravel-media-model.git",
+                "reference": "924506c0c1e67f421df97925f32cfe01e34aeb4c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sertxudeveloper/laravel-media-model/zipball/924506c0c1e67f421df97925f32cfe01e34aeb4c",
+                "reference": "924506c0c1e67f421df97925f32cfe01e34aeb4c",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^9.5",
+                "illuminate/database": "^9.5",
+                "illuminate/support": "^9.5",
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "nunomaduro/collision": "^6.0",
+                "orchestra/testbench": "^7.5",
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "SertxuDeveloper\\Media\\MediaServiceProvider"
+                    ],
+                    "aliases": {
+                        "Media": "SertxuDeveloper\\Media\\Facades\\Media"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SertxuDeveloper\\Media\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sergio Peris",
+                    "email": "dev.sertxu@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Attach media files to your models",
+            "homepage": "https://github.com/sertxudeveloper/laravel-media-model",
+            "keywords": [
+                "laravel",
+                "laravel-media-model",
+                "sertxudeveloper"
+            ],
+            "support": {
+                "issues": "https://github.com/sertxudeveloper/laravel-media-model/issues",
+                "source": "https://github.com/sertxudeveloper/laravel-media-model/tree/v1.0.0"
+            },
+            "time": "2022-06-07T07:46:41+00:00"
         },
         {
             "name": "spatie/laravel-sluggable",
@@ -8468,7 +8533,8 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^8.0.2"
+        "php": "^8.0.2",
+        "ext-simplexml": "*"
     },
     "platform-dev": [],
     "plugin-api-version": "2.3.0"

@@ -6,11 +6,13 @@
     "license": "MIT",
     "require": {
         "php": "^8.0.2",
+        "ext-simplexml": "*",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.2",
         "laravel/sanctum": "^2.14.1",
         "laravel/tinker": "^2.7",
         "mavsan/laravel-1c-protocol": "^7.0",
+        "sertxudeveloper/laravel-media-model": "^1.0",
         "spatie/laravel-sluggable": "^3.4"
     },
     "require-dev": {
